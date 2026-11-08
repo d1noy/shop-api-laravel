@@ -55,4 +55,4 @@ php artisan serve
 
 ## Статус
 
-[Готов]. Планы: [тесты, документация API (Swagger), Docker].
+[Готов]. Планы: Тесты, Docker.
