@@ -8,10 +8,9 @@ use App\Http\Controllers\Panel\PaymentController;
 use App\Http\Controllers\Panel\ProductController;
 use Illuminate\Support\Facades\Route;
 
-
+Route::get('/pay/success', fn () => 'Оплата прошла успешно')->name('mock-pay-success');
 Route::get('/pay/{payment}', [PaymentController::class, 'showForm'])->name('payments.mock-pay-form');
 Route::post('/pay/{payment}', [PaymentController::class, 'pay'])->name('payments.mock-pay-submit');
-Route::get('/pay/success', fn () => 'Оплата прошла успешно')->name('mock-pay-success');
 
 Route::prefix('admin')->group(function () {
     Route::get('/login', [AuthController::class, 'login'])->name('login');
